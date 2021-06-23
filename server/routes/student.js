@@ -1,6 +1,6 @@
 import express from "express";
 import {getStudents, createStudent} from "../controllers/studnt.js";
-import stdnt from "../models/stdnt.js"
+import stdnt from "../models/stdnt.js";
 
 const router = express.Router();
 

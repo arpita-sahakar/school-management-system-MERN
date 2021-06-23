@@ -8,7 +8,7 @@ import studentRoutes from "./routes/student.js";
 
 const app = express();
 
-app.use("/", studentRoutes);
+app.use("/students", studentRoutes);
 
 app.use(bodyParser.json({ limit: "20mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "20mb", extended: true }));
