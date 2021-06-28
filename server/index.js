@@ -8,12 +8,13 @@ import studentRoutes from "./routes/student.js";
 
 const app = express();
 
+
+
+
+app.use(express.urlencoded({ limit: "20mb", extended: true }));
+app.use(express.json());
 app.use("/students", studentRoutes);
-
-app.use(bodyParser.json({ limit: "20mb", extended: true }));
-app.use(bodyParser.urlencoded({ limit: "20mb", extended: true }));
-
-app.use(cors());
+// app.use(cors());
 
 const CONNECTION_URL =
   "mongodb+srv://mongodbuser:mongodbpassword@cluster0.dbv79.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";

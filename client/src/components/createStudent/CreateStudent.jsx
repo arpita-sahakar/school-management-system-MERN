@@ -25,7 +25,10 @@ export default function CreateStudent() {
   })
 
   const createStudent = () => {
-    axios.post("http://localhost:5000/students", student)
+    console.log(student);
+    axios.post("/students", student).then(()=>{
+      window.location.reload(false);
+    })
   }
 
   return (
